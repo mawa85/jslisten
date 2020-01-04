@@ -4,12 +4,12 @@ After=network.target auditd.service
 
 [Service]
 Type=idle
-ExecStart=/bin/sh -ec "exec /opt/bin/jslisten"
+ExecStart=/bin/sh -ec "exec /opt/bin/jslisten --device /dev/input/js0"
 ExecReload=/bin/kill -9 $MAINPID
 ExecStop=/bin/kill -9 $MAINPID
 KillMode=process
 Restart=on-failure
-User=pi
+User=root
 
 [Install]
 WantedBy=multi-user.target
