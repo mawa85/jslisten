@@ -58,6 +58,7 @@ Also added `--help` for the command line for a brief summary of options.
 
 Following example for Raspbian. Should work for many other distributions almost the same way.
  * Use the precompiled binary in bin/ or run "# make" to create the binary
+ * Requirements for compilation on raspbian: apt install build-essential libudev-dev
  * Place the binary to "/opt/bin" (if you change the folder, please update your init script)
  * Copy the configuration script to /etc/jslisten.cfg
  * Modify the configuration script to your needs
